@@ -1,0 +1,7 @@
+projects:
+  super:
+    schema: "federated-schema.graphqls"
+  account:
+    schema: "subgraphs/account/graph/schema.graphqls"
+  todo:
+    schema: "subgraphs/todo/graph/schema.graphqls"
