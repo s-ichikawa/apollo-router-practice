@@ -1,0 +1,27 @@
+directive @goField(forceResolver: Boolean, name: String, omittable: Boolean) on INPUT_FIELD_DEFINITION
+  | FIELD_DEFINITION
+
+type Todo {
+  id: ID!
+  text: String!
+  done: Boolean!
+  user: User!
+}
+
+type User  @key(fields: "id") {
+  id: ID!
+  todos: [Todo!]! @goField(forceResolver: true)
+}
+
+type Query {
+  todos: [Todo!]!
+}
+
+input NewTodoInput {
+  text: String!
+  userId: String!
+}
+
+type Mutation {
+  createTodo(input: NewTodoInput!): Todo!
+}

@@ -1,0 +1,9 @@
+subgraphs:
+  account:
+    routing_url: http://localhost:9091/query
+    schema:
+      file: subgraphs/account/graph/schema.graphqls
+  todo:
+    routing_url: http://localhost:9092/query
+    schema:
+      file: subgraphs/todo/graph/schema.graphqls
