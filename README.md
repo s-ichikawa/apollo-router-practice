@@ -6,6 +6,9 @@
 
 [rover](https://www.apollographql.com/docs/rover/commands/supergraphs#supergraph-compose)
 サブグラフのSchemaからスーパーグラフのSchemaを生成するのに必要
+```shell
+curl -sSL https://rover.apollo.dev/nix/latest | sh
+```
 
 [apollo router](https://www.apollographql.com/docs/graphos/reference/router/self-hosted-install)
 ```shell
